@@ -90,6 +90,15 @@ Team managers can use this page to efficiently monitor overall team performance 
   - Average sale value
   - Weeks to close
 
-### 2. Sales opportunities - provides a detailed table of currently engaging opportunities. This enables managers to identify potential sales.
+### 2. Engaging Sales Opportunities 
+This page provides a detailed table of currently engaging opportunities. This enables managers to identify potential sales.
 
-### 3. 
+### 3. Sales by region  
+This page keeps track of sales by location, industry, and product category, allowing managers to identify market trends. This page will contain the following charts:
+- Choropleth map of sales by location
+- Sales by industry
+- Top 5 accounts
+- Sales and conversion by product.
+
+### 4. Performance by Teams
+This page allows managers to track their performance compared to other teams by quarter. This page will contain total sales, number of won deals, conversion rates, average sale value, and average weeks to close by manager.

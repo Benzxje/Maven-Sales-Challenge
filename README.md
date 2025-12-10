@@ -74,13 +74,11 @@ The following calculated fields and measures were created using **DAX** to suppo
 
 ---
 ## Data Modeling
-A dedicated **Date Table** was created to serve as the central time dimension for the entire model. This enables:
+A dedicated **Date Table** was created to serve as the central time dimension for the entire model. It drives all official time intelligence calculations using **close_date** as the primary reference. This enables:
 - Quarter-based filtering
 - Quarter-over-Quarter (QoQ) comparisons
 - Year-over-Year and trend analysis
 - Consistent time-based KPI calculations across all dashboards
-
-The Date Table drives all official time intelligence calculations using **close_date** as the primary reference.
 
 
 To construct a unified analytical fact table, the following merges were performed:
@@ -90,7 +88,7 @@ To construct a unified analytical fact table, the following merges were performe
 - The `accounts` table was merged with `sales_pipeline` using the **account** field to support sector and customer-based performance analysis.
 
 The resulting data model looks like this:
-![Data Modeling](Data Modeling.png)
+![Data Modeling](data_model.png)
 
 --- 
 ## Dashboard Planning

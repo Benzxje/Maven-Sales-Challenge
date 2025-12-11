@@ -185,41 +185,70 @@ This page supports internal benchmarking and helps highlight high-performing and
 ## Dashboard building
 ### 1. Team Sales Performance
 
-The main Dashboard page provides a high-level summary of team performance. It displays KPIs such as **Total Sales**, **Win Rate**, **Number of Opportunities**, and **Average Deal Size**, all broken down by quarter.
+This page provides an immediate overview of how the team is performing in the current quarter. It is designed to help managers quickly identify trends, strengths, and potential performance issues.
 
-A bar chart of **Sales by Sales Agent** allows users to click on an agent’s name to filter the entire Dashboard to show KPIs specific to that agent. A summary table lists key metrics for each agent, where column headers can be clicked to sort the table by any chosen metric.  
+Managers can:
 
-A navigation button labeled **“See Sales Opportunities →”** is included to guide users to the detailed opportunities section.
+- Select a specific sales agent to instantly drill into their individual KPIs.
+- Sort metrics to see top performers or identify team members who may need additional support.
+- Use navigation buttons to jump directly to Sales by Region or Engaging Sales Opportunities for deeper analysis.
+
+The Performance by Agent table is fully interactive:
+- Clicking an agent’s name filters the entire page to show KPIs specific to that agent. Column headers support sorting, allowing managers to compare agents across different performance dimensions.
+
+Two dropdown slicers — Quarter and Manager — are included to enable flexible filtering across time periods and teams.
 
 ![Team Sales Performance](team_sales_performance.png)
 
 ### 2. Engaging Sales Opportunities
 
-The Sales Opportunities page displays a detailed list of open and won opportunities, including potential value, stage, account, and assigned agent.  
+This page is focused on pipeline analysis and gives managers a detailed view of all ongoing opportunities.
 
-A slicer for **Sales Agent** was added to allow users to drill down into opportunities handled by a specific team member. Selecting an agent automatically filters the opportunity table.
+It helps you:
+
+- Review all actively engaged opportunities and their potential sales value.
+- Filter by sales agent to understand individual pipeline strength.
+- Identify high-value opportunities that may require strategic follow-up.
+- Support weekly strategy discussions and deal reviews.
+
+A tile slicer for Sales Agent enables quick filtering to a specific team member’s pipeline.
+A dropdown slicer for Manager allows viewing opportunities by team.
+
+Selecting an agent dynamically filters the table to show only their opportunities, helping managers evaluate both quantity and quality of deals in progress.
+
 ![Engaging Sales Opportunities](engaging-sales_opportunities.png)
 
 ### 3. Sales by Region
 
-This page includes a filled map chart showing **Total Sales by Country**, enabling geographic analysis of performance. Supporting visuals such as:
+This page provides geographic and segment-based insights, helping managers understand where revenue is coming from and which markets or sectors are driving performance.
 
-- Total Sales by Industry  
-- Total Sales and Win Rates by Product  
-- Accounts Table  
+It allows users to:
 
-all interact with each other—selecting a region or product highlights related data across all visuals on this page.
+- Identify high-performing countries and industries.
+- Analyze product performance across different regions.
+- Use cross-highlighting to explore relationships between location, product category, and final sales outcomes.
+- Two dropdown slicers — Quarter and Manager — are included for easy filtering across teams and time.
+
+All visuals interact with one another:
+- Selecting a region, product, or industry dynamically highlights related data across every chart on the page.
+
+This page is especially useful for territory planning, market strategy, and identifying underserved regions.
+
 ![Sales by Regions](sales_by_regions.png)
 
 ### 4. Performance by Teams
 
-The Team Performance page compares a manager’s team against other teams and against the company-wide average. Team performance indicators include:
+This page helps managers evaluate how their team is performing relative to other teams and to the company average.
 
-- Total Sales  
-- Win Rate  
-- Average Deal Size  
-- Opportunities Won  
+It enables you to:
+- Compare teams across key metrics such as total sales, conversion rate, deal value, and weeks to close.
+- Spot both overperforming and underperforming teams.
+- Understand whether performance gaps are isolated to individuals or reflect broader team trends.
+- Benchmark results at the organisation level to support decision-making.
 
-Reference lines representing the **company average** were added to provide context for each team's performance.
+A dropdown slicer for Manager allows filtering performance views by team.
+
+This page is valuable for leadership reporting, performance reviews, and resource allocation planning.
+
 ![Performance by Teams](performance_by_teams.png)
 

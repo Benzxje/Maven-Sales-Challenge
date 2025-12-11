@@ -6,9 +6,9 @@ Dataset Source: [CRM Sales Opportunities on Maven Analytics](https://mavenanalyt
 
 Project Link: [Project Page at Maven Analytics](https://mavenanalytics.io/challenges/maven-sales-challenge)
 
-GitHub Link: [GitHub Repo](https://github.com/Benzxje/Maven-Sales-Challenge/tree/main)
+GitHub Link: [GitHub Repo](https://github.com/giahungbui/Maven-Sales-Challenge/tree/main)
 
-Source File: [Power BI File](https://github.com/Benzxje/Maven-Sales-Challenge/blob/main/Sales%20Analysis.pbix)
+Source File: [Power BI File](https://github.com/giahungbui/Maven-Sales-Challenge/blob/main/Sales%20Analysis.pbix)
 
 # Business Scenario
 

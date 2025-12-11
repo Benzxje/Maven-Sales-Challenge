@@ -53,7 +53,6 @@ The dataset covers the period from October 2016 to December 2017 and supports de
 The data model was relatively clean; however, several important preprocessing steps were required to ensure accuracy and analytical reliability:
 
 - The product name **"GTXPro"** in the `sales_pipeline` table was standardized to **"GTX Pro"** to match the naming convention in the `products` table. This was handled using **Find & Replace in Power Query**.
-- Since five sales agents are missing from the sales pipeline table and there's no data to clarify this, it's presumed they are new hires who haven't yet begun to prospect opportunities.
 - Engaging deals without close dates were properly handled to prevent incorrect quarter assignments.
 - The missing values within the dataset are expected occurrences and should be retained in their current state.
 
@@ -70,14 +69,40 @@ The following calculated fields and measures were created using **DAX** to suppo
 - Engaging Deals, Proposing Deals, Lost Deals
 - Potential Sales from Engaging Deals
 
-### Key Definitions
+Some of the DAX codes:
 
-- **Total Sales** = Sum of close_value
-- **Won Deals** = Count of opportunities with deal_stage = "Won"  
-- **Conversion Rate** = Won Deals / (Won Deals + Lost Deals)  
-- **Average Deal Value** = Total Sales / Won Deals  
-- **Weeks to Close** = Average difference between engage_date and close_date
-- **Potential Sales** = Total potential sale price from engaging deals  
+- Total Sales: 
+```
+Total Sales = Sum(sales_pipeline[close_value])
+```
+
+- Conversion Rate:
+```
+Conversion = 
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(sales_pipeline),
+        sales_pipeline[deal_stage] = "Won"
+    ),
+    COUNTROWS(sales_pipeline)
+)
+```
+- Weeks to Close:
+```
+Avg Week to Close = 
+AVERAGEX(
+    FILTER(
+        sales_pipeline,
+        sales_pipeline[deal_stage] = "Won"
+            && NOT ISBLANK(sales_pipeline[close_date])
+    ),
+    DATEDIFF(
+    sales_pipeline[engage_date],
+    sales_pipeline[close_date],
+    WEEK
+)
+)
+```
 
 ---
 ## Data Modeling
@@ -90,95 +115,15 @@ A dedicated **Date Table** was created to serve as the central time dimension fo
 
 To construct a unified analytical fact table, the following merges were performed:
 
-- The `sales_pipeline` table was merged with the `products` table using the **product** field to enable product-level revenue and conversion analysis.
-- The `sales_teams` table was merged with `sales_pipeline` through the **sales_agent** field to integrate manager and team-level insights.
-- The `accounts` table was merged with `sales_pipeline` using the **account** field to support sector and customer-based performance analysis.
+- The `sales_pipeline` table was merged with the `products` table using the **product** field.
+- The `sales_teams` table was merged with `sales_pipeline` through the **sales_agent** field.
+- The `accounts` table was merged with `sales_pipeline` using the **account** field.
 - All dimension tables (`accounts`, `products`, `sales_teams`, and `Date Table`) filter the `sales_pipeline` table through **one-to-many** relationships.
 
 The resulting data model looks like this:
 ![Data Modeling](data_model.png)
 
 --- 
-## Dashboard Planning
-
-Since the dashboard is designed for sales managers, usability is treated as the highest priority. The dashboard is optimized for:
-
-- Minimal training requirements
-- Clear and intuitive KPI presentation
-- Simple and consistent navigation
-- Strong visual hierarchy for quick interpretation
-
-The report is structured into four main pages, each serving a specific analytical purpose.
-
-### 1. Quarterly Performance Overview
-
-This page enables team managers to efficiently monitor overall team performance alongside the results of individual sales agents. It provides a high-level performance snapshot for the selected quarter.
-
-Key visuals include:
-
-- **KPI Cards**
-  - Total Sales (current quarter, previous quarter, company average)
-  - Average Deal Value (current quarter, previous quarter, company average)
-  - Won Deals (current quarter, previous quarter, conversion rate)
-  - Average Weeks to Close (current quarter, previous quarter, company average)
-  - Engaging Deals (current quarter, potential value)
-
-- **Total Sales Trend Line**
-  - Displays total revenue performance by quarter to highlight growth patterns
-
-- **Sales Opportunities Funnel**
-  - Visualizes deal distribution across pipeline stages for the selected quarter
-
-- **Performance by Agents Table**
-  - Total Sales  
-  - Won Deals  
-  - Conversion Rate  
-  - Average Deal Value  
-  - Average Weeks to Close  
-
-This page allows managers to quickly benchmark individuals against team and company performance.
-
----
-
-### 2. Engaging Sales Opportunities
-
-This page provides a detailed table of currently engaging opportunities. It allows managers to:
-
-- Review active deals in progress
-- Identify high-potential revenue opportunities
-- Filter opportunities by sales agent and quarter
-- Support short-term revenue forecasting
-
----
-
-### 3. Sales by Region
-
-This page tracks sales performance across geography, industry, and product categories to help identify market trends and revenue drivers.
-
-Key visuals include:
-
-- Choropleth map of total sales by location
-- Sales by industry
-- Top 5 customer accounts by total sales
-- Sales and conversion rate by product
-
-This page supports strategic market and product performance analysis.
-
----
-
-### 4. Performance by Teams
-
-This page allows managers to track their team’s performance relative to other teams by quarter.
-
-Key metrics include:
-
-- Total Sales
-- Number of Won Deals
-- Conversion Rate
-- Average Deal Value
-- Average Weeks to Close
-
-This page supports internal benchmarking and helps highlight high-performing and underperforming teams.
 
 ## Dashboard building
 ### 1. Team Sales Performance
@@ -218,7 +163,7 @@ Selecting an agent dynamically filters the table to show only their opportunitie
 
 ### 3. Sales by Region
 
-This page provides geographic and segment-based insights, helping managers understand where revenue is coming from and which markets or sectors are driving performance.
+This dashboard provides geographic and segment-based insights, helping managers understand where revenue is coming from and which markets or sectors are driving performance.
 
 It allows users to:
 
@@ -249,4 +194,31 @@ A dropdown slicer for Manager allows filtering performance views by team.
 This page is valuable for leadership reporting, performance reviews, and resource allocation planning.
 
 ![Performance by Teams](performance_by_teams.png)
+
+## Key Insights / Findings
+
+### Team & Individual Performance
+
+- Strong performance disparities exist between sales agents, especially in team Melvin and Celia.
+- Some agents close deals faster but with lower average value, while others close fewer but larger deals (Violet in Cara's team had 122 sales with a total of 123K, which is much lower than the average sales value).
+- Managers can clearly see who needs coaching in conversion or pipeline generation (In Dustin's team, the conversion rate in 2017 of Lajuana is 40%).
+  
+### Product & Market Insights
+
+- Certain product series generate consistently higher revenue across multiple regions (GTX Pro and GTX Plus Pro).
+- Some regions show high engagement but low conversion - indicating follow-up or pricing issues.
+
+### Pipeline Health
+- Several high-value opportunities remain in an “engaging” stage for extended periods.
+- Managers can quickly detect stalled deals and intervene early (Several engaging deals from 2016 that haven't been closed).
+
+### Team Benchmarking
+- Some teams outperform the company average across most KPIs (Team Rocco appeared to have to highest average sales value and conversion rate) .
+- Underperforming teams often lag in conversion rates rather than quantity of deals (Team Melvin had the most sales and number of won sales but they had the lowest conversion rate across all teams).
+
+## Limitations of the Analysis
+- Time period is fixed at 2016–2017; recent or real-world trends are not included.
+- Some agents do not appear in the pipeline table (assumed new hires).
+- The dataset includes the final deal value (close value) but not quantity sold or product breakdown, limiting deeper analysis.
+- Data only reflects CRM-recorded activities - offline or informal activities aren't captured.
 

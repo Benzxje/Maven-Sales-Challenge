@@ -60,17 +60,26 @@ The data model was relatively clean; however, several important preprocessing st
 - The missing values within the dataset are expected occurrences and should be retained in their current state.
 
 
-### Calculated Fields & Measures
+## Calculated Fields & Measures
 
 The following calculated fields and measures were created using **DAX** to support the dashboards:
 
-- Total Sales, Last Quarter Sales, Company Average Sales (Sum of close_value)
-- Won Deals, Last Quarter Won Deals (Count of deal_stage = 'Won')
-- Conversion Rate (Won Deals / (Won Deals + Lost Deals))
-- Average Sales Value, Last Quarter Average Sales Value, Company Average Sales Value (Total Sales / Won Deals)
-- Weeks to Close, Last Quarter Weeks to Close, Company Weeks to Close (Difference between engage_date and close_date)
-- Engaging Deals, Proposing Deals, Lost Deals (Count of deal_stage)
-- Potential Sales from Engaging Deals (Sum of sales_price from engaging deals)
+- Total Sales, Last Quarter Sales, Company Average Sales 
+- Won Deals, Last Quarter Won Deals 
+- Conversion Rate 
+- Average Sales Value, Last Quarter Average Sales Value, Company Average Sales Value 
+- Weeks to Close, Last Quarter Weeks to Close, Company Weeks to Close 
+- Engaging Deals, Proposing Deals, Lost Deals
+- Potential Sales from Engaging Deals
+
+### Key Definitions
+
+- **Total Sales** = Sum of close_value
+- **Won Deals** = Count of opportunities with deal_stage = "Won"  
+- **Conversion Rate** = Won Deals / (Won Deals + Lost Deals)  
+- **Average Deal Value** = Total Sales / Won Deals  
+- **Weeks to Close** = Average difference between engage_date and close_date
+- **Potential Sales** = Total potential sale price from engaging deals  
 
 ---
 ## Data Modeling
@@ -172,3 +181,40 @@ Key metrics include:
 - Average Weeks to Close
 
 This page supports internal benchmarking and helps highlight high-performing and underperforming teams.
+
+## Dashboard building
+### 1. Quarterly Performance Overview
+
+The main Dashboard page provides a high-level summary of team performance. It displays KPIs such as **Total Sales**, **Win Rate**, **Number of Opportunities**, and **Average Deal Size**, all broken down by quarter.
+
+A bar chart of **Sales by Sales Agent** allows users to click on an agent’s name to filter the entire Dashboard to show KPIs specific to that agent. A summary table lists key metrics for each agent, where column headers can be clicked to sort the table by any chosen metric.  
+
+A navigation button labeled **“See Sales Opportunities →”** is included to guide users to the detailed opportunities section.
+
+### 2. Sales Opportunities Page**
+
+The Sales Opportunities page displays a detailed list of open and won opportunities, including potential value, stage, account, and assigned agent.  
+
+A slicer for **Sales Agent** was added to allow users to drill down into opportunities handled by a specific team member. Selecting an agent automatically filters the opportunity table.
+
+### 3. Sales by Region Page**
+
+This page includes a filled map chart showing **Total Sales by Country**, enabling geographic analysis of performance. Supporting visuals such as:
+
+- Total Sales by Industry  
+- Total Sales and Win Rates by Product  
+- Accounts Table  
+
+all interact with each other—selecting a region or product highlights related data across all visuals on this page.
+
+### 4. Team Performance Page**
+
+The Team Performance page compares a manager’s team against other teams and against the company-wide average. Team performance indicators include:
+
+- Total Sales  
+- Win Rate  
+- Average Deal Size  
+- Opportunities Won  
+
+Reference lines representing the **company average** were added to provide context for each team's performance.
+

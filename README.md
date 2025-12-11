@@ -147,7 +147,7 @@ Managers can:
 The Performance by Agent table is fully interactive:
 - Clicking an agent’s name filters the entire page to show KPIs specific to that agent. Column headers support sorting, allowing managers to compare agents across different performance dimensions.
 
-Two dropdown slicers — Quarter and Manager — are included to enable flexible filtering across time periods and teams.
+Two dropdown slicers - Quarter and Manager - are included to enable flexible filtering across time periods and teams.
 
 ![Team Sales Performance](team_sales_performance.png)
 

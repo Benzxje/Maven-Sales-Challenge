@@ -204,7 +204,7 @@ Two dropdown slicers — Quarter and Manager — are included to enable flexible
 
 This page is focused on pipeline analysis and gives managers a detailed view of all ongoing opportunities.
 
-It helps you:
+It helps them to:
 
 - Review all actively engaged opportunities and their potential sales value.
 - Filter by sales agent to understand individual pipeline strength.
@@ -240,7 +240,7 @@ This page is especially useful for territory planning, market strategy, and iden
 
 This page helps managers evaluate how their team is performing relative to other teams and to the company average.
 
-It enables you to:
+It enables them to:
 - Compare teams across key metrics such as total sales, conversion rate, deal value, and weeks to close.
 - Spot both overperforming and underperforming teams.
 - Understand whether performance gaps are isolated to individuals or reflect broader team trends.

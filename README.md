@@ -178,7 +178,7 @@ It allows users to:
 - Identify high-performing countries and industries.
 - Analyze product performance across different regions.
 - Use cross-highlighting to explore relationships between location, product category, and final sales outcomes.
-- Two dropdown slicers — Quarter and Manager — are included for easy filtering across teams and time.
+- Two dropdown slicers - Quarter and Manager - are included for easy filtering across teams and time.
 
 All visuals interact with one another:
 - Selecting a region, product, or industry dynamically highlights related data across every chart on the page.

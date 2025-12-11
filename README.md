@@ -8,7 +8,7 @@ Project Link: [Project Page at Maven Analytics](https://mavenanalytics.io/challe
 
 GitHub Link: [GitHub Repo](https://github.com/Benzxje/Maven-Sales-Challenge/tree/main)
 
-Power BI file: 
+Source File: [Power BI File](https://github.com/Benzxje/Maven-Sales-Challenge/blob/main/Sales%20Analysis.pbix)
 
 # Business Scenario
 

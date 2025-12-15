@@ -25,7 +25,7 @@ To address this, I developed a multi-page Power BI dashboard that allows manager
 
 This solution provides the visibility needed for performance evaluation, forecasting, and strategic decision-making.
 
-# Assumptions
+# Assumptions 
 
 - Sales managers require both individual and team-level performance monitoring.  
 - Teams are allowed to compare performance across the business.  
@@ -33,6 +33,12 @@ This solution provides the visibility needed for performance evaluation, forecas
   - Target evaluation  
   - End-of-quarter sales pushes  
 - Dashboards must be easy to interpret, supported with tooltips and intuitive visuals.
+
+# Limitations
+- Time period is fixed at 2016–2017; recent or real-world trends are not included.
+- Some agents do not appear in the pipeline table (assumed new hires).
+- The dataset includes the final deal value (close value) but not quantity sold or product breakdown, limiting deeper analysis.
+- Data only reflects CRM-recorded activities - offline or informal activities aren't captured.
 
 # Objective
 The main objective is to create an interactive dashboard that sales managers can use to answer the following questions:
@@ -206,39 +212,29 @@ This page is valuable for leadership reporting, performance reviews, and resourc
 
 # Key Insights / Findings
 
-## Team & Individual Performance
+- Significant performance disparities exist within Team Melvin and Team Celia, with top-performing agents generating 2–3× higher total sales and number of sales than their lower-performing peers. For example, in Quarter 4, team Melvin's top agent closed $358K with a conversion rate nearly 60%, while the lowest-performing agent closed $42K with a conversion rate below 52%.
+- Violet (Cara’s team) closed 122 deals but generated only $123K in total sales, resulting in a significantly lower average deal value compared to peers.
+- Lajuana (Dustin’s team) recorded a significant low conversion rate of only 54% while Hayden (Celia's team) reached a highest rate of 70% throughout the year.
+- GTX Pro and GTX Plus Pro consistently account for the majority of high-value closed deals across multiple regions, with $3.5M and $2.6M respectively , outperforming other product series in both revenue contribution and win consistency.
+- 2000 high-value opportunities remain in an “engaging” stage for extended periods, including deals initiated as early as 2016.
+- Team Melvin had the highest total sales of $2.2M and 882 won sales but they had the lowest conversion rate which is 62%.
+- Team Dustin had the longest average weeks to close of 7.79 and the lowest average sales value of $1.5K.
 
-- Strong performance disparities exist between sales agents, especially in team Melvin and Celia.
-- Some agents close deals faster but with lower average value, while others close fewer but larger deals (Violet in Cara's team had 122 sales with a total of 123K, which is much lower than the average sales value).
-- Managers can clearly see who needs coaching in conversion or pipeline generation (In Dustin's team, the conversion rate in 2017 of Lajuana is 40%).
-  
-## Product & Market Insights
+# Recommendations / Actionable Solutions
 
-- Certain product series generate consistently higher revenue across multiple regions (GTX Pro and GTX Plus Pro).
-- Some regions show high engagement but low conversion - indicating follow-up or pricing issues.
+- Addressing performance gaps within teams by benchmarking top performers and providing targeted coaching to lower-performing agents to improve overall team consistency and output.
 
-## Pipeline Health
-- Several high-value opportunities remain in an “engaging” stage for extended periods.
-- Managers can quickly detect stalled deals and intervene early (Several engaging deals from 2016 that haven't been closed).
+- Shifting focus from deal volume to deal value by introducing average deal size targets and encouraging higher-quality opportunities to increases total revenue without increasing workload.
 
-## Team Benchmarking
-- Some teams outperform the company average across most KPIs (Team Rocco appeared to have to highest average sales value and conversion rate) .
-- Underperforming teams often lag in conversion rates rather than quantity of deals (Team Melvin had the most sales and number of won sales but they had the lowest conversion rate, indicating inefficiencies in closing and potential issues with qualification or follow-up discipline).
+- Improving conversion rates through stronger qualification criteria and regular reviews of lost deals to increase win rates using the existing pipeline.
 
-# Limitations of the Analysis
-- Time period is fixed at 2016–2017; recent or real-world trends are not included.
-- Some agents do not appear in the pipeline table (assumed new hires).
-- The dataset includes the final deal value (close value) but not quantity sold or product breakdown, limiting deeper analysis.
-- Data only reflects CRM-recorded activities - offline or informal activities aren't captured.
+- Prioritising high-performing product categories in sales planning and incentive structures to maximise returns from proven revenue drivers.
 
+- Actively managing stalled opportunities by flagging deals inactive for extended periods and enforcing follow-up actions to accelerate deal closure and improves forecast reliability.
+
+- Balancing activity and efficiency metrics so teams are evaluated on both volume and conversion to prevent inefficiencies caused by chasing low-quality opportunities.
+
+- Reduce long sales cycles by identifying bottlenecks and focusing effort on higher-value, faster-closing deals to improve cash flow and sales productivity.
 
 
-# Conclusion
-This project delivers a complete Business Intelligence solution that helps MavenTech sales leaders:
-- Understand team and individual performance at a glance
-- Analyse pipeline quality and identify stalled or high-value opportunities
-- Explore regional and industry performance to guide territory planning
-- Compare team performance against organisation benchmarks
-- Make data-driven decisions around coaching, resource allocation, and strategy
 
-Overall, the dashboard is fully interactive, filter-driven, and designed to support both strategic reviews and day-to-day decision-making.

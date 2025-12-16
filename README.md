@@ -210,31 +210,23 @@ This page is valuable for leadership reporting, performance reviews, and resourc
 
 ![Performance by Teams](performance_by_teams.png)
 
-# Key Insights / Findings
+# Key Insights
 
-- Significant performance disparities exist within Team Melvin and Team Celia, with top-performing agents generating 2–3× higher total sales and number of sales than their lower-performing peers. For example, in Quarter 4, team Melvin's top agent closed $358K with a conversion rate nearly 60%, while the lowest-performing agent closed $42K with a conversion rate below 52%.
-- Violet (Cara’s team) closed 122 deals but generated only $123K in total sales, resulting in a significantly lower average deal value compared to peers.
-- Lajuana (Dustin’s team) recorded a significant low conversion rate of only 54% while Hayden (Celia's team) reached a highest rate of 70% throughout the year.
+- Significant performance disparities exist within Team Melvin and Team Celia, with top-performing agents generating 2–3× higher total sales and number of sales than their lower-performing peers. In Q4, Team Melvin’s top agent closed $358K with ~60% conversion, while the lowest performer closed $42K with < 52% conversion, indicating uneven execution and skill gaps within teams.
+- Violet (Cara’s team) closed 122 deals but generated only $123K in total sales, resulting in a significantly lower average deal value compared to peers, resulting in a significantly lower average deal value than peers, suggesting a focus on low-value or poorly qualified opportunities.
+- Lajuana (Dustin’s team) recorded a significant low conversion rate of only 54% while Hayden (Celia's team) reached a highest rate of 70% throughout the year, highlighting substantial differences in qualification quality and closing effectiveness.
 - GTX Pro and GTX Plus Pro consistently account for the majority of high-value closed deals across multiple regions, with $3.5M and $2.6M respectively , outperforming other product series in both revenue contribution and win consistency.
-- 2000 high-value opportunities remain in an “engaging” stage for extended periods, including deals initiated as early as 2016.
-- Team Melvin had the highest total sales of $2.2M and 882 won sales but they had the lowest conversion rate which is 62%.
-- Team Dustin had the longest average weeks to close of 7.79 and the lowest average sales value of $1.5K.
+- 2000 high-value opportunities remain in an “Engaging” stage for extended periods, including deals initiated as early as 2016, creating delays in revenue realisation and reducing forecast reliability.
+- Team Melvin had the highest total sales of $2.2M and 882 won sales but they had the lowest conversion rate which is 62%, indicating inefficiencies in qualification or follow-up despite strong pipeline volume.
+- Team Dustin had the longest average weeks to close of 7.79 and the lowest average sales value of $1.5K, suggesting time is being spent on low-return opportunities.
 
-# Recommendations / Actionable Solutions
+# Recommendations
 
-- Addressing performance gaps within teams by benchmarking top performers and providing targeted coaching to lower-performing agents to improve overall team consistency and output.
-
-- Shifting focus from deal volume to deal value by introducing average deal size targets and encouraging higher-quality opportunities to increases total revenue without increasing workload.
-
-- Improving conversion rates through stronger qualification criteria and regular reviews of lost deals to increase win rates using the existing pipeline.
-
-- Prioritising high-performing product categories in sales planning and incentive structures to maximise returns from proven revenue drivers.
-
-- Actively managing stalled opportunities by flagging deals inactive for extended periods and enforcing follow-up actions to accelerate deal closure and improves forecast reliability.
-
-- Balancing activity and efficiency metrics so teams are evaluated on both volume and conversion to prevent inefficiencies caused by chasing low-quality opportunities.
-
-- Reduce long sales cycles by identifying bottlenecks and focusing effort on higher-value, faster-closing deals to improve cash flow and sales productivity.
+- Close performance gaps within teams by setting benchmark KPIs based on top performers and using them as coaching targets for lower-performing agents.
+- Shift focus from deal volume to deal value by introducing minimum average deal value targets alongside deal count goals, ensuring agents prioritise higher-quality opportunities rather than maximising volume alone.
+- Improve conversion rates by tightening opportunity qualification rules (e.g. requiring clear budget, decision-maker, and timeline) and conducting regular reviews of lost deals to identify common failure points.
+- Actively manage stalled opportunities by flagging deals that remain in the same stage beyond a defined time threshold and requiring action plans or escalation decisions.
+- Reduce long sales cycles by analysing deals with extended closing times, identifying common bottlenecks, and reallocating effort toward faster-closing, higher-value opportunities.
 
 
 
